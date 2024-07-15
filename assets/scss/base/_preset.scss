@@ -1,0 +1,25 @@
+.blind {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+body {
+  color: #333;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.8;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
