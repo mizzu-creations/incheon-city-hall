@@ -23,3 +23,12 @@ body {
 .hidden {
   display: none;
 }
+
+.inner {
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
