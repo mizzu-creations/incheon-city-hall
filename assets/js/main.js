@@ -1,16 +1,31 @@
 const swiperVisual = new Swiper(".swiper.visual", {
   loop: true,
+  speed: 500,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-footer .swiper-pagination",
+    type: "fraction",
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".sc-visual .swiper-button-next",
+    prevEl: ".sc-visual .swiper-button-prev",
   },
 });
 
+$(".group-right .swiper-pagination").html((_, html) =>
+  html.replace(" / ", " - ")
+);
+
 const swiperParticipation = new Swiper(".swiper.participation", {
   loop: true,
+  speed: 500,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
   },

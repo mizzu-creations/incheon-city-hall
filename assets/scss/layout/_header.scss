@@ -188,6 +188,8 @@
         a {
           display: flex;
           flex-direction: column;
+          padding: 4px 0;
+
           gap: 8px;
           > span {
             display: flex;
