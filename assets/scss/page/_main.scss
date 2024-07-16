@@ -1,3 +1,11 @@
+// section 제목 공통 스타일
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+// section visual, mayor 영역
 .flex:first-child {
   gap: 48px;
   padding: 4px 0 16px 0;
@@ -173,20 +181,83 @@
   }
 }
 
-.section-title {
-  font-size: 24px;
-  font-weight: 700;
-}
-
+// section 주요서비스 영역
 .sc-service {
+  padding: 40px 0;
   .service-list {
     display: flex;
     justify-content: space-between;
     .service-item {
+      flex: 1;
+      min-width: 4.8rem;
+      transition: transform 0.2s ease-in;
+      &:hover {
+        transform: translateY(-10px);
+      }
       a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 8px;
+        i {
+          width: 100%;
+          height: 70px;
+          background-size: 69px 58px;
+        }
+        .ic-tour {
+          background: url(/assets/images/main/service_02_tour.png) no-repeat
+            center;
+        }
+        .ic-job {
+          background: url(/assets/images/main/service_03_job.png) no-repeat
+            center;
+        }
+        .ic-organization {
+          background: url(/assets/images/main/service_04_organization.png)
+            no-repeat center;
+        }
+        .ic-cool {
+          background: url(/assets/images/main/service_05_cool.png) no-repeat
+            center;
+        }
+        .ic-minwon {
+          background: url(/assets/images/main/service_06_minwon.png) no-repeat
+            center;
+        }
+        .ic-smartcity {
+          background: url(/assets/images/main/service_07_smartcity.png)
+            no-repeat center;
+        }
+        .ic-youth {
+          background: url(/assets/images/main/service_08_youth.png) no-repeat
+            center;
+        }
+        .ic-water {
+          background: url(/assets/images/main/service_09_water.png) no-repeat
+            center;
+        }
+        .ic-tax {
+          background: url(/assets/images/main/service_10_tax.png) no-repeat
+            center;
+        }
+        .ic-digital {
+          background: url(/assets/images/main/service_11_digitalcityhall.png)
+            no-repeat center;
+        }
+        .ic-benefit {
+          background: url(/assets/images/main/service_12_icbenefit.png)
+            no-repeat center;
+        }
+        .ic-budget {
+          background: url(/assets/images/main/service_13_budget.png) no-repeat
+            center;
+        }
+        span {
+          font-size: 16px;
+          line-height: 1.2;
+          text-align: center;
+          color: #555;
+        }
       }
     }
   }
