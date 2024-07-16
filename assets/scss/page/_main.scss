@@ -448,13 +448,82 @@
     height: 368px;
   }
 }
-
+// section 분야별 정보 영역
 .sc-field-info {
   width: 100%;
-  background-color: #0f0;
+  padding: 30px 0 40px;
+  background-color: #f3f8fb;
   .inner {
     .info-list {
       display: flex;
+      .info-item {
+        flex: 1;
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          i {
+            width: 80%;
+            max-width: 110px;
+            height: 96px;
+            border-radius: 30px;
+            &.ic-traffic {
+              background: url(/assets/images/main/field_traffic.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-ocean {
+              background: url(/assets/images/main/field_ocean.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-culture {
+              background: url(/assets/images/main/field_culture.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-build {
+              background: url(/assets/images/main/field_build.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-eco {
+              background: url(/assets/images/main/field_eco.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-health {
+              background: url(/assets/images/main/field_health.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-welfare {
+              background: url(/assets/images/main/field_welfare.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-safe {
+              background: url(/assets/images/main/field_safe.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-env {
+              background: url(/assets/images/main/field_env.png) no-repeat
+                center;
+              background-size: contain;
+            }
+            &.ic-pub {
+              background: url(/assets/images/main/field_pub.png) no-repeat
+                center;
+              background-size: contain;
+            }
+          }
+          span {
+            line-height: 1.25;
+          }
+        }
+      }
     }
   }
 }

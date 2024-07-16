@@ -1098,10 +1098,78 @@ body {
 
 .sc-field-info {
   width: 100%;
-  background-color: #0f0;
+  padding: 30px 0 40px;
+  background-color: #f3f8fb;
 }
 .sc-field-info .inner .info-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.sc-field-info .inner .info-list .info-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.sc-field-info .inner .info-list .info-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.sc-field-info .inner .info-list .info-item a i {
+  width: 80%;
+  max-width: 110px;
+  height: 96px;
+  border-radius: 30px;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-traffic {
+  background: url(/assets/images/main/field_traffic.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-ocean {
+  background: url(/assets/images/main/field_ocean.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-culture {
+  background: url(/assets/images/main/field_culture.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-build {
+  background: url(/assets/images/main/field_build.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-eco {
+  background: url(/assets/images/main/field_eco.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-health {
+  background: url(/assets/images/main/field_health.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-welfare {
+  background: url(/assets/images/main/field_welfare.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-safe {
+  background: url(/assets/images/main/field_safe.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-env {
+  background: url(/assets/images/main/field_env.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a i.ic-pub {
+  background: url(/assets/images/main/field_pub.png) no-repeat center;
+  background-size: contain;
+}
+.sc-field-info .inner .info-list .info-item a span {
+  line-height: 1.25;
 }/*# sourceMappingURL=style.css.map */
