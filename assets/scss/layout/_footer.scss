@@ -1,0 +1,117 @@
+#footer {
+  background-color: #393c41;
+  .inner {
+    padding: 36px 0;
+    color: #fff;
+  }
+  .related-site-area {
+    .site-list {
+      display: flex;
+      gap: 4px 16px;
+      .site-item {
+        flex: 1;
+        a {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 44px;
+          padding: 0 20px;
+          background-color: #2c3131;
+          border-radius: 4px;
+          &::after {
+            content: "";
+            border: 7px solid rgba(0, 0, 0, 0);
+            border-bottom-color: #fff;
+            position: absolute;
+            right: 20px;
+            margin-top: -5px;
+            border-width: 7px 7px 6px;
+          }
+        }
+      }
+    }
+  }
+  .nav-certification-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    padding-top: 24px;
+    .footer-nav {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      .menu-list {
+        display: flex;
+      }
+      .menu-item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child)::after {
+          content: "";
+          width: 1px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #777;
+          margin: 0 10px;
+        }
+        strong {
+          color: #f7b02a;
+        }
+      }
+    }
+    .footer-mark {
+      .mark-list {
+        display: flex;
+        gap: 20px;
+        .mark-item {
+          a {
+            display: block;
+          }
+          &:first-child a {
+            width: 124px;
+            height: 40px;
+            background: url(/assets/images/footer/logo_koreansymbol.png)
+              no-repeat center;
+            background-size: 124px 40px;
+          }
+          &:last-child a {
+            width: 68px;
+            height: 41px;
+            background: url(/assets/images/footer/logo_webaccess.png) no-repeat
+              center;
+          }
+        }
+      }
+    }
+  }
+  .address-callcenter-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 16px;
+      font-weight: 300;
+      address {
+        letter-spacing: -0.05em;
+      }
+      small {
+        letter-spacing: 0;
+        opacity: 0.5;
+      }
+    }
+    a {
+      width: 245px;
+      height: 46px;
+      background: url(/assets/images/footer/logo_michugol.png) no-repeat center;
+    }
+  }
+}
+
+#footer a:focus {
+  outline: 2px solid #dbf227;
+}
