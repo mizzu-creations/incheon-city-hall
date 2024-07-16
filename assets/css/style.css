@@ -893,6 +893,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 45px;
   padding: 52px 0 40px 0;
 }
@@ -964,7 +967,7 @@ body {
   height: 40px;
   padding: 1px;
   position: absolute;
-  top: 12px;
+  top: 14px;
   right: 0;
   background: url(/assets/images/btn_view_more.png) no-repeat center;
 }
@@ -1092,8 +1095,117 @@ body {
   color: #666;
 }
 .sc-notice .group-participation {
+  position: relative;
   width: 495px;
-  height: 368px;
+}
+.sc-notice .group-participation .section-title {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.sc-notice .group-participation .swiper.participation {
+  border: 1px solid #e2e8fc;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 4px rgba(12, 24, 58, 0.13);
+          box-shadow: 0 4px 4px rgba(12, 24, 58, 0.13);
+}
+.sc-notice .group-participation .swiper.participation .swiper-wrapper .swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sc-notice .group-participation .swiper-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  padding: 0 24px;
+  background-color: rgba(45, 53, 72, 0.9);
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  z-index: 1;
+}
+.sc-notice .group-participation .swiper-footer .btn-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.sc-notice .group-participation .swiper-footer .btn-all::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(/assets/images/main/slider_viewall.png) no-repeat center;
+}
+.sc-notice .group-participation .swiper-footer .group-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.sc-notice .group-participation .swiper-footer .group-right .swiper-pagination {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+  position: static;
+}
+.sc-notice .group-participation .swiper-footer .group-right .swiper-pagination-current {
+  font-weight: 600;
+  color: #f7b02a;
+}
+.sc-notice .group-participation .swiper-footer .group-right .control-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sc-notice .group-participation .swiper-footer .group-right .control-btns button {
+  width: 24px;
+  height: 24px;
+  background-size: 20px 20px;
+}
+.sc-notice .group-participation .swiper-footer .group-right .control-btns .btn-prev {
+  background: url(/assets/images/main/slider_nav_prev.png) no-repeat center;
+}
+.sc-notice .group-participation .swiper-footer .group-right .control-btns .btn-pause {
+  background: url(/assets/images/main/slider_control_stop.png) no-repeat center;
+}
+.sc-notice .group-participation .swiper-footer .group-right .control-btns .btn-next {
+  background: url(/assets/images/main/slider_nav_next.png) no-repeat center;
+}
+.sc-notice .group-participation [class*=swiper-button] {
+  position: absolute;
+  top: 54%;
+  width: 64px;
+  height: 64px;
+}
+.sc-notice .group-participation [class*=swiper-button]::after {
+  content: "";
+}
+.sc-notice .group-participation .swiper-button-prev {
+  left: -32px;
+  background: url(/assets/images/slider_arrow_left.png) no-repeat center;
+}
+.sc-notice .group-participation .swiper-button-next {
+  right: -32px;
+  background: url(/assets/images/slider_arrow_right.png) no-repeat center;
 }
 
 .sc-field-info {
@@ -1171,5 +1283,6 @@ body {
   background-size: contain;
 }
 .sc-field-info .inner .info-list .info-item a span {
+  font-size: 16px;
   line-height: 1.25;
 }/*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@ const swiperVisual = new Swiper(".swiper.visual", {
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-footer .swiper-pagination",
+    el: ".sc-visual .swiper-pagination",
     type: "fraction",
   },
   navigation: {
@@ -14,10 +14,6 @@ const swiperVisual = new Swiper(".swiper.visual", {
     prevEl: ".sc-visual .swiper-button-prev",
   },
 });
-
-$(".group-right .swiper-pagination").html((_, html) =>
-  html.replace(" / ", " - ")
-);
 
 const swiperParticipation = new Swiper(".swiper.participation", {
   loop: true,
@@ -27,13 +23,16 @@ const swiperParticipation = new Swiper(".swiper.participation", {
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".group-participation .swiper-pagination",
+    type: "fraction",
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".group-participation .swiper-button-next",
+    prevEl: ".group-participation .swiper-button-prev",
   },
 });
+
+$(".swiper-pagination").html((_, html) => html.replace(" / ", " - "));
 
 const swiperCitizen = new Swiper(".swiper.citizen", {
   loop: true,
