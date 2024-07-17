@@ -114,6 +114,20 @@ body {
   top: 0;
 }
 
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+#btn-top a {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: url(/assets/images/btn_top.png) no-repeat center;
+}
+
 #header {
   position: relative;
   z-index: 100;
@@ -1495,6 +1509,7 @@ body {
   background: url(/assets/images/btn_view_more.png) no-repeat center;
   background-size: contain;
 }
+
 .sc-sns {
   position: relative;
   display: -webkit-box;

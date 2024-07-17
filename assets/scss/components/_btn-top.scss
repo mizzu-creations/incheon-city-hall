@@ -1,0 +1,13 @@
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  a {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: url(/assets/images/btn_top.png) no-repeat center;
+  }
+}
