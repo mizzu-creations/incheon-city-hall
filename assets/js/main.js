@@ -10,8 +10,10 @@ const swiperVisual = new Swiper(".swiper.visual", {
     type: "fraction",
   },
   navigation: {
-    nextEl: ".sc-visual .swiper-button-next",
-    prevEl: ".sc-visual .swiper-button-prev",
+    nextEl:
+      ".sc-visual .swiper-button-next, .sc-visual .swiper-footer .btn-next",
+    prevEl:
+      ".sc-visual .swiper-button-prev,  .sc-visual .swiper-footer .btn-prev",
   },
 });
 
@@ -27,17 +29,16 @@ const swiperParticipation = new Swiper(".swiper.participation", {
     type: "fraction",
   },
   navigation: {
-    nextEl: ".group-participation .swiper-button-next",
-    prevEl: ".group-participation .swiper-button-prev",
+    nextEl: ".group-participation .swiper-button-next, .next",
+    prevEl: ".group-participation .swiper-button-prev, .prev",
   },
 });
 
 $(".swiper-pagination").html((_, html) => html.replace(" / ", " - "));
 
 const swiperCitizen = new Swiper(".swiper.citizen", {
-  loop: true,
   slidesPerView: 4,
-  spaceBetween: 10,
+  spaceBetween: 16,
   speed: 1000,
   autoplay: {
     delay: 3000,
@@ -45,9 +46,10 @@ const swiperCitizen = new Swiper(".swiper.citizen", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".sc-for-citizen .next",
+    prevEl: ".sc-for-citizen .prev",
   },
 });
