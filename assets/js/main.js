@@ -1,17 +1,3 @@
-$(function () {
-  // swiper slide 설정
-  setSwiperSlide();
-  // #btn-top 동작
-  scrollToTop();
-  // .group-news 탭 메뉴, 콘텐츠 전환
-  changeNewsTab();
-
-  $(window).on("scroll", () => {
-    // header fixed 전환
-    toggleHeaderFixed();
-  });
-});
-
 function setSwiperSlide() {
   // 재생, 일시정지 전환
   function toggleSlideAutoplay(
@@ -127,3 +113,17 @@ function changeNewsTab() {
     }
   });
 }
+
+$(function () {
+  // swiper slide 설정
+  setSwiperSlide();
+  // #btn-top 동작
+  scrollToTop();
+  // .group-news 탭 메뉴, 콘텐츠 전환
+  changeNewsTab();
+
+  $(window).on("scroll", () => {
+    // header fixed 전환
+    toggleHeaderFixed();
+  });
+});
