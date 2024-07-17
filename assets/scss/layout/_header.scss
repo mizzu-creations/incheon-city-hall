@@ -234,13 +234,36 @@
         width: 24px;
         height: 100%;
         margin-left: 32px;
-        &::after {
-          content: "";
+        &.more {
           width: 24px;
           height: 24px;
-          background: url(/assets/images/header/gnb_menuall.png) no-repeat;
+          height: 100%;
+          background: url(/assets/images/header/gnb_menuall.png) no-repeat
+            center;
           background-size: 24px 24px;
         }
+      }
+    }
+  }
+}
+
+#header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  .header-util,
+  .header-search {
+    display: none;
+  }
+  .header-main {
+    padding-top: 0;
+    .menu-item.hidden {
+      display: block;
+      .search {
+        background: url(/assets/images/header/gnb_search.png) no-repeat center;
       }
     }
   }

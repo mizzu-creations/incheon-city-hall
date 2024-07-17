@@ -40,8 +40,13 @@
               <li class="menu-item"><a href="">인천소개</a></li>
               <li class="menu-item"><a href="">분야별 정보</a></li>
               <li class="menu-item">
-                <button type="button">
+                <button type="button" class="more">
                   <span class="blind">전체 메뉴 보기</span>
+                </button>
+              </li>
+              <li class="menu-item hidden">
+                <button type="button" class="search">
+                  <span class="blind">통합 검색</span>
                 </button>
               </li>
             </ul>
@@ -1360,9 +1365,7 @@
                 target="_blank"
                 title="👪저출생 문제, 이번에도 인천이 선도합니다!  i+ 집 드림"
               >
-                <div class="img-wrap">
-                  <img src="./assets/images/media/media_daily.jpg" alt />
-                </div>
+                <img src="./assets/images/media/media_daily.jpg" alt />
                 <strong
                   >👪저출생 문제, 이번에도 인천이 선도합니다! i+ 집 드림</strong
                 >
@@ -1378,10 +1381,8 @@
           <section class="sc-travel">
             <h2 class="section-title">인천여행</h2>
             <div class="daily-content">
-              <a href="" target="_blank" title="인천 전통시장 미식투어"
-                ><div class="img-wrap">
-                  <img src="./assets/images/media/media_travel.jpg" alt />
-                </div>
+              <a href="" target="_blank" title="인천 전통시장 미식투어">
+                <img src="./assets/images/media/media_travel.jpg" alt />
                 <strong>인천 전통시장 미식투어</strong>
               </a>
             </div>
@@ -1395,10 +1396,8 @@
           <section class="sc-media">
             <h2 class="section-title">인천미디어</h2>
             <div class="daily-content">
-              <a href="" target="_blank" title="인천기업경영지원센터 개소식"
-                ><div class="img-wrap">
-                  <img src="./assets/images/media/media_media.jpg" alt />
-                </div>
+              <a href="" target="_blank" title="인천기업경영지원센터 개소식">
+                <img src="./assets/images/media/media_media.jpg" alt />
                 <strong>인천기업경영지원센터 개소식</strong>
               </a>
             </div>
@@ -1453,9 +1452,9 @@
       </div>
     </main>
     <div id="btn-top">
-      <a href="#header" title="페이지 위로 이동">
+      <button title="페이지 위로 이동">
         <span class="blind">페이지 위로 이동</span>
-      </a>
+      </button>
     </div>
     <footer id="footer">
       <h2 class="blind">인천광역시 사이트 하단 영역</h2>

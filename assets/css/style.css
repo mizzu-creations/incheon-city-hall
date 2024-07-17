@@ -120,7 +120,7 @@ body {
   right: 20px;
   z-index: 99;
 }
-#btn-top a {
+#btn-top button {
   display: block;
   width: 56px;
   height: 56px;
@@ -422,12 +422,35 @@ body {
   height: 100%;
   margin-left: 32px;
 }
-#gnb .menu-list .menu-item button::after {
-  content: "";
+#gnb .menu-list .menu-item button.more {
   width: 24px;
   height: 24px;
-  background: url(/assets/images/header/gnb_menuall.png) no-repeat;
+  height: 100%;
+  background: url(/assets/images/header/gnb_menuall.png) no-repeat center;
   background-size: 24px 24px;
+}
+
+#header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+#header.fixed .header-util,
+#header.fixed .header-search {
+  display: none;
+}
+#header.fixed .header-main {
+  padding-top: 0;
+}
+#header.fixed .header-main .menu-item.hidden {
+  display: block;
+}
+#header.fixed .header-main .menu-item.hidden .search {
+  background: url(/assets/images/header/gnb_search.png) no-repeat center;
 }
 
 #footer {
@@ -1468,17 +1491,9 @@ body {
   border-radius: 12px;
   overflow: hidden;
 }
-.flex:nth-child(2) section [class*=-content] a .img-wrap {
-  position: relative;
+.flex:nth-child(2) section [class*=-content] a img {
   width: inherit;
   height: inherit;
-}
-.flex:nth-child(2) section [class*=-content] a .img-wrap img {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
