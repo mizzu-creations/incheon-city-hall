@@ -1446,13 +1446,13 @@ body {
 .flex:nth-child(2) section [class*=-content] {
   height: 229px;
   position: relative;
-  border-radius: 12px;
-  overflow: hidden;
 }
 .flex:nth-child(2) section [class*=-content] a {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 .flex:nth-child(2) section [class*=-content] a .img-wrap {
   position: relative;
@@ -1474,6 +1474,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  border-radius: 12px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   font-family: "Noto Sans";
@@ -1495,5 +1496,67 @@ body {
   background-size: contain;
 }
 .sc-sns {
-  padding: 24px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 0 40px;
+}
+.sc-sns h2 {
+  width: 215px;
+  height: 45px;
+  background: url(/assets/images/main/sns_title.png) no-repeat center;
+}
+.sc-sns .sns-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+.sc-sns .sns-list .sns-item a {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+.sc-sns .sns-list .sns-item:nth-child(1) a {
+  background: url(/assets/images/sns/insta.png) no-repeat;
+  background-size: 36px 36px;
+}
+.sc-sns .sns-list .sns-item:nth-child(2) a {
+  background: url(/assets/images/sns/facebook.png) no-repeat;
+  background-size: 36px 36px;
+}
+.sc-sns .sns-list .sns-item:nth-child(3) a {
+  background: url(/assets/images/sns/youtube.png) no-repeat;
+  background-size: 36px 36px;
+}
+.sc-sns .sns-list .sns-item:nth-child(4) a {
+  background: url(/assets/images/sns/twitter.png) no-repeat;
+  background-size: 36px 36px;
+}
+.sc-sns .sns-list .sns-item:nth-child(5) a {
+  background: url(/assets/images/sns/kakaostory.png) no-repeat;
+  background-size: 36px 36px;
+}
+.sc-sns .sns-list .sns-item:nth-child(6) a {
+  background: url(/assets/images/sns/blog.png) no-repeat;
+  background-size: 36px 36px;
+}
+.sc-sns .sns-list .sns-item:nth-child(7) a {
+  background: url(/assets/images/sns/post.png) no-repeat;
+  background-size: 36px 36px;
+}
+.sc-sns::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 230px;
+  right: 340px;
+  background-color: #d8e1fb;
 }/*# sourceMappingURL=style.css.map */

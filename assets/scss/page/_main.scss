@@ -779,12 +779,12 @@
     [class*="-content"] {
       height: 229px;
       position: relative;
-      border-radius: 12px;
-      overflow: hidden;
       a {
         display: block;
         width: 100%;
         height: 100%;
+        border-radius: 12px;
+        overflow: hidden;
         .img-wrap {
           position: relative;
           width: inherit;
@@ -804,6 +804,7 @@
           position: absolute;
           left: 0;
           bottom: 0;
+          border-radius: 12px;
           background-image: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0) 0%,
@@ -837,5 +838,61 @@
 }
 // section sns 영역
 .sc-sns {
-  padding: 24px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 40px;
+  h2 {
+    width: 215px;
+    height: 45px;
+    background: url(/assets/images/main/sns_title.png) no-repeat center;
+  }
+  .sns-list {
+    display: flex;
+    gap: 12px;
+    .sns-item {
+      a {
+        display: block;
+        width: 36px;
+        height: 36px;
+      }
+      &:nth-child(1) a {
+        background: url(/assets/images/sns/insta.png) no-repeat;
+        background-size: 36px 36px;
+      }
+      &:nth-child(2) a {
+        background: url(/assets/images/sns/facebook.png) no-repeat;
+        background-size: 36px 36px;
+      }
+      &:nth-child(3) a {
+        background: url(/assets/images/sns/youtube.png) no-repeat;
+        background-size: 36px 36px;
+      }
+      &:nth-child(4) a {
+        background: url(/assets/images/sns/twitter.png) no-repeat;
+        background-size: 36px 36px;
+      }
+      &:nth-child(5) a {
+        background: url(/assets/images/sns/kakaostory.png) no-repeat;
+        background-size: 36px 36px;
+      }
+      &:nth-child(6) a {
+        background: url(/assets/images/sns/blog.png) no-repeat;
+        background-size: 36px 36px;
+      }
+      &:nth-child(7) a {
+        background: url(/assets/images/sns/post.png) no-repeat;
+        background-size: 36px 36px;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    left: 230px;
+    right: 340px;
+    background-color: #d8e1fb;
+  }
 }
