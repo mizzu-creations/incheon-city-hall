@@ -1,3 +1,23 @@
+// 재생, 일시정지 전환
+function toggleSlideAutoplay(
+  swiper,
+  containerSelector,
+  pauseSelector,
+  playSelector
+) {
+  const container = $(containerSelector);
+  container.find(pauseSelector).on("click", () => {
+    swiper.autoplay.stop();
+    container.find(playSelector).removeClass("hidden");
+    container.find(pauseSelector).addClass("hidden");
+  });
+  container.find(playSelector).on("click", () => {
+    swiper.autoplay.start();
+    container.find(pauseSelector).removeClass("hidden");
+    container.find(playSelector).addClass("hidden");
+  });
+}
+
 const swiperVisual = new Swiper(".swiper.visual", {
   loop: true,
   speed: 500,
@@ -16,7 +36,6 @@ const swiperVisual = new Swiper(".swiper.visual", {
       ".sc-visual .swiper-button-prev,  .sc-visual .swiper-footer .btn-prev",
   },
 });
-
 const swiperParticipation = new Swiper(".swiper.participation", {
   loop: true,
   speed: 500,
@@ -33,9 +52,6 @@ const swiperParticipation = new Swiper(".swiper.participation", {
     prevEl: ".group-participation .swiper-button-prev, .prev",
   },
 });
-
-$(".swiper-pagination").html((_, html) => html.replace(" / ", " - "));
-
 const swiperCitizen = new Swiper(".swiper.citizen", {
   slidesPerView: 4,
   spaceBetween: 16,
@@ -53,3 +69,14 @@ const swiperCitizen = new Swiper(".swiper.citizen", {
     prevEl: ".sc-for-citizen .prev",
   },
 });
+
+$(".swiper-pagination").html((_, html) => html.replace(" / ", " - "));
+
+toggleSlideAutoplay(swiperVisual, ".sc-visual", ".btn-pause", ".btn-play");
+toggleSlideAutoplay(
+  swiperParticipation,
+  ".group-participation",
+  ".pause",
+  ".play"
+);
+toggleSlideAutoplay(swiperCitizen, ".sc-for-citizen", ".pause", ".play");

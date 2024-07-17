@@ -76,6 +76,12 @@
             background: url(/assets/images/main/slider_nav_prev.png) no-repeat
               center;
           }
+          .btn-play {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url(/assets/images/icon-play.png) no-repeat center;
+            background-size: 10px auto;
+          }
           .btn-pause {
             background: url(/assets/images/main/slider_control_stop.png)
               no-repeat center;
@@ -517,6 +523,12 @@
             background: url(/assets/images/main/slider_nav_prev.png) no-repeat
               center;
           }
+          .play {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url(/assets/images/icon-play.png) no-repeat center;
+            background-size: 10px auto;
+          }
           .pause {
             background: url(/assets/images/main/slider_control_stop.png)
               no-repeat center;
@@ -653,6 +665,10 @@
       }
       .prev {
         background: url(/assets/images/slider_arrow_left.png) no-repeat center;
+        background-size: contain;
+      }
+      .play {
+        background: url(/assets/images/slider_control_play.png) no-repeat center;
         background-size: contain;
       }
       .pause {
