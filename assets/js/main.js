@@ -3,6 +3,8 @@ $(function () {
   setSwiperSlide();
   // #btn-top 동작
   scrollToTop();
+  // .group-news 탭 메뉴, 콘텐츠 전환
+  changeNewsTab();
 
   $(window).on("scroll", () => {
     // header fixed 전환
@@ -109,5 +111,19 @@ function toggleHeaderFixed() {
 function scrollToTop() {
   $("#btn-top").on("click", () => {
     $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+}
+function changeNewsTab() {
+  $(".group-news .tab").click(function (e) {
+    e.preventDefault();
+    const tabId = $(this).data("tab");
+
+    // 단순 링크인 마지막 tab을 제외한
+    if (tabId) {
+      $(".group-news .tab").removeClass("on");
+      $(this).addClass("on");
+      $(".tab-item .content").removeClass("on");
+      $(tabId).addClass("on");
+    }
   });
 }
