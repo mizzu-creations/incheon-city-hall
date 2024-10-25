@@ -1,58 +1,65 @@
+// swiper slide 설정
 function setSwiperSlide() {
   // 재생, 일시정지 전환
   function toggleSlideAutoplay(
     swiper,
-    containerSelector,
+    $container,
     pauseSelector,
     playSelector
   ) {
-    const container = $(containerSelector);
-    container.find(pauseSelector).on("click", () => {
+    const $pauseBtn = $container.find(pauseSelector);
+    const $playBtn = $container.find(playSelector);
+
+    $pauseBtn.on("click", () => {
       swiper.autoplay.stop();
-      container.find(playSelector).removeClass("hidden");
-      container.find(pauseSelector).addClass("hidden");
+      $playBtn.removeClass("hidden");
+      $pauseBtn.addClass("hidden");
     });
-    container.find(playSelector).on("click", () => {
+
+    $playBtn.on("click", () => {
       swiper.autoplay.start();
-      container.find(pauseSelector).removeClass("hidden");
-      container.find(playSelector).addClass("hidden");
+      $pauseBtn.removeClass("hidden");
+      $playBtn.addClass("hidden");
+    });
+  }
+  // visual, participation 공통 Swiper 생성 함수
+  function createSwiper(selector, paginationEl, navigationConfig) {
+    return new Swiper(selector, {
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: paginationEl,
+        type: "custom",
+        renderCustom: (_, current, total) => {
+          return `<span><span style="color: #f7b02a; font-weight: 600;">${current}</span> - ${total}</span>`;
+        },
+      },
+      navigation: navigationConfig,
     });
   }
 
-  const swiperVisual = new Swiper(".swiper.visual", {
-    loop: true,
-    speed: 500,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".sc-visual .swiper-pagination",
-      type: "fraction",
-    },
-    navigation: {
+  const swiperVisual = createSwiper(
+    ".swiper.visual",
+    ".sc-visual .swiper-pagination",
+    {
+      nextEl: ".sc-visual .swiper-button-next, .sc-visual .btn-next",
+      prevEl: ".sc-visual .swiper-button-prev, .sc-visual .btn-prev",
+    }
+  );
+  const swiperParticipation = createSwiper(
+    ".swiper.participation",
+    ".group-participation .swiper-pagination",
+    {
       nextEl:
-        ".sc-visual .swiper-button-next, .sc-visual .swiper-footer .btn-next",
+        ".group-participation .swiper-button-next, .group-participation .btn-next",
       prevEl:
-        ".sc-visual .swiper-button-prev,  .sc-visual .swiper-footer .btn-prev",
-    },
-  });
-  const swiperParticipation = new Swiper(".swiper.participation", {
-    loop: true,
-    speed: 500,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".group-participation .swiper-pagination",
-      type: "fraction",
-    },
-    navigation: {
-      nextEl: ".group-participation .swiper-button-next, .next",
-      prevEl: ".group-participation .swiper-button-prev, .prev",
-    },
-  });
+        ".group-participation .swiper-button-prev, .group-participation .btn-prev",
+    }
+  );
   const swiperCitizen = new Swiper(".swiper.citizen", {
     slidesPerView: 4,
     spaceBetween: 16,
@@ -62,43 +69,36 @@ function setSwiperSlide() {
       disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper.citizen .swiper-pagination",
       clickable: true,
     },
     navigation: {
-      nextEl: ".sc-for-citizen .next",
-      prevEl: ".sc-for-citizen .prev",
+      nextEl: ".sc-for-citizen .btn-next",
+      prevEl: ".sc-for-citizen .btn-prev",
     },
   });
 
-  $(".swiper-pagination").html((_, html) => html.replace(" / ", " - "));
-
-  toggleSlideAutoplay(swiperVisual, ".sc-visual", ".btn-pause", ".btn-play");
+  toggleSlideAutoplay(swiperVisual, $(".sc-visual"), ".btn-pause", ".btn-play");
   toggleSlideAutoplay(
     swiperParticipation,
-    ".group-participation",
-    ".pause",
-    ".play"
+    $(".group-participation"),
+    ".btn-pause",
+    ".btn-play"
   );
-  toggleSlideAutoplay(swiperCitizen, ".sc-for-citizen", ".pause", ".play");
+  toggleSlideAutoplay(
+    swiperCitizen,
+    $(".sc-for-citizen"),
+    ".btn-pause",
+    ".btn-play"
+  );
 }
-function toggleHeaderFixed() {
-  let currentScroll = $(window).scrollTop();
-  const mainTopPosition = $("#contents").offset().top;
-
-  if (currentScroll < mainTopPosition) {
-    $("#header").removeClass("fixed");
-    $("#contents").css("margin-top", "0");
-  } else {
-    $("#header").addClass("fixed");
-    $("#contents").css("margin-top", "305px");
-  }
-}
+// #btn-top 동작
 function scrollToTop() {
   $("#btn-top").on("click", () => {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 }
+// .group-news 탭 메뉴, 콘텐츠 전환
 function changeNewsTab() {
   $(".group-news .tab").click(function (e) {
     e.preventDefault();
@@ -113,17 +113,25 @@ function changeNewsTab() {
     }
   });
 }
-
-$(function () {
-  // swiper slide 설정
-  setSwiperSlide();
-  // #btn-top 동작
-  scrollToTop();
-  // .group-news 탭 메뉴, 콘텐츠 전환
-  changeNewsTab();
+// header fixed 전환
+function toggleHeaderFixed() {
+  const mainTopPosition = $("#contents").offset().top;
 
   $(window).on("scroll", () => {
-    // header fixed 전환
-    toggleHeaderFixed();
+    const $header = $("#header");
+    const isFixed = $(window).scrollTop() >= mainTopPosition;
+
+    $header.toggleClass("fixed", isFixed);
+    $("#contents").css("margin-top", isFixed ? "305px" : "0");
   });
+}
+
+$(function () {
+  setSwiperSlide();
+  scrollToTop();
+  changeNewsTab();
+  toggleHeaderFixed();
 });
+
+// json 기반 메가메뉴 생성
+// api 기반 날씨 업데이트

@@ -677,10 +677,6 @@ body {
   gap: 7px;
   position: static;
 }
-.flex:first-child .sc-visual .swiper-footer .group-right .swiper-pagination-current {
-  font-weight: 600;
-  color: #f7b02a;
-}
 .flex:first-child .sc-visual .swiper-footer .group-right .control-btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1213,10 +1209,6 @@ body {
   gap: 7px;
   position: static;
 }
-.sc-notice .group-participation .swiper-footer .group-right .swiper-pagination-current {
-  font-weight: 600;
-  color: #f7b02a;
-}
 .sc-notice .group-participation .swiper-footer .group-right .control-btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1230,19 +1222,19 @@ body {
   height: 24px;
   background-size: 20px 20px;
 }
-.sc-notice .group-participation .swiper-footer .group-right .control-btns .prev {
+.sc-notice .group-participation .swiper-footer .group-right .control-btns .btn-prev {
   background: url(/assets/images/main/slider_nav_prev.png) no-repeat center;
 }
-.sc-notice .group-participation .swiper-footer .group-right .control-btns .play {
+.sc-notice .group-participation .swiper-footer .group-right .control-btns .btn-play {
   width: 1.5rem;
   height: 1.5rem;
   background: url(/assets/images/icon-play.png) no-repeat center;
   background-size: 10px auto;
 }
-.sc-notice .group-participation .swiper-footer .group-right .control-btns .pause {
+.sc-notice .group-participation .swiper-footer .group-right .control-btns .btn-pause {
   background: url(/assets/images/main/slider_control_stop.png) no-repeat center;
 }
-.sc-notice .group-participation .swiper-footer .group-right .control-btns .next {
+.sc-notice .group-participation .swiper-footer .group-right .control-btns .btn-next {
   background: url(/assets/images/main/slider_nav_next.png) no-repeat center;
 }
 .sc-notice .group-participation [class*=swiper-button] {
@@ -1376,19 +1368,19 @@ body {
   height: 40px;
   border-radius: 50%;
 }
-.sc-for-citizen .group-control .control-area .prev {
+.sc-for-citizen .group-control .control-area .btn-prev {
   background: url(/assets/images/slider_arrow_left.png) no-repeat center;
   background-size: contain;
 }
-.sc-for-citizen .group-control .control-area .play {
+.sc-for-citizen .group-control .control-area .btn-play {
   background: url(/assets/images/slider_control_play.png) no-repeat center;
   background-size: contain;
 }
-.sc-for-citizen .group-control .control-area .pause {
+.sc-for-citizen .group-control .control-area .btn-pause {
   background: url(/assets/images/slider_control_stop.png) no-repeat center;
   background-size: contain;
 }
-.sc-for-citizen .group-control .control-area .next {
+.sc-for-citizen .group-control .control-area .btn-next {
   background: url(/assets/images/slider_arrow_right.png) no-repeat center;
   background-size: contain;
 }

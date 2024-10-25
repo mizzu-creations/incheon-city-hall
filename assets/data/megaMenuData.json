@@ -1,0 +1,284 @@
+{
+  "categories": [
+    {
+      "category": "인천소식",
+      "groups": [
+        { "groupTitle": "새소식" },
+        { "groupTitle": "주요행사정보" },
+        {
+          "groupTitle": "보도/해명",
+          "items": [
+            { "itemTitle": "보도자료" },
+            { "itemTitle": "바로잡습니다" }
+          ]
+        },
+        {
+          "groupTitle": "고시/공고/시보",
+          "items": [
+            { "itemTitle": "고시공고", "newWindow": true },
+            { "itemTitle": "인천시보" },
+            { "itemTitle": "반상회보" },
+            { "itemTitle": "입법예고", "newWindow": true }
+          ]
+        },
+        { "groupTitle": "매체 모음" },
+        { "groupTitle": "카드뉴스" }
+      ]
+    },
+    {
+      "category": "소통참여",
+      "groups": [
+        {
+          "groupTitle": "제안/토론",
+          "newWindow": true
+        },
+        {
+          "groupTitle": "주민참여예산",
+          "newWindow": true
+        },
+        {
+          "groupTitle": "비영리단체",
+          "items": [
+            { "itemTitle": "비영리단체 되기" },
+            { "itemTitle": "비영리단체 회원" },
+            { "itemTitle": "비영리단체 메뉴 이용 신청" },
+            { "itemTitle": "공익활동지원사업" },
+            { "itemTitle": "비영리단체 사랑방" },
+            { "itemTitle": "자료실" }
+          ]
+        },
+        {
+          "groupTitle": "중간지원조직 네트워크",
+          "items": [
+            { "itemTitle": "네트워크 구성이야기" },
+            { "itemTitle": "네트워크 활동이야기" },
+            { "itemTitle": "네트워크 협치이야기" }
+          ]
+        },
+        {
+          "groupTitle": "스마트도시 리빙랩",
+          "items": [
+            { "itemTitle": "스마트도시 리빙랩 소개" },
+            { "itemTitle": "시민참여계획" },
+            { "itemTitle": "시민활동현황" },
+            { "itemTitle": "관련자료실" }
+          ]
+        },
+        {
+          "groupTitle": "시민의소리",
+          "items": [
+            { "itemTitle": "자유게시판" },
+            { "itemTitle": "칭찬합니다" }
+          ]
+        },
+        {
+          "groupTitle": "설문조사",
+          "newWindow": true
+        },
+        {
+          "groupTitle": "이벤트",
+          "newWindow": true
+        },
+        {
+          "groupTitle": "공모전",
+          "newWindow": true
+        },
+        {
+          "groupTitle": "문자알림서비스",
+          "items": [
+            { "itemTitle": "맞춤형 시정정보" },
+            { "itemTitle": "인천알리미", "newWindow": true },
+            { "itemTitle": "대기환경정보", "newWindow": true },
+            { "itemTitle": "주정차 위반 단속", "newWindow": true }
+          ]
+        },
+        {
+          "groupTitle": "인천愛뜰 사용허가 신청",
+          "items": [
+            { "itemTitle": "인천愛뜰 소개" },
+            { "itemTitle": "인천愛뜰 사용허가 절차" },
+            { "itemTitle": "인천愛뜰 사용허가 신청" },
+            { "itemTitle": "허가조건/유의사항" },
+            { "itemTitle": "행사일정" }
+          ]
+        },
+        {
+          "groupTitle": "대학생 아르바이트"
+        },
+        {
+          "groupTitle": "대학생 학자금대출이자지원 신청"
+        },
+        {
+          "groupTitle": "생생시정견학"
+        },
+        {
+          "groupTitle": "고향사랑기부제",
+          "items": [
+            { "itemTitle": "제도 취지" },
+            { "itemTitle": "인천시 대표 답례품" },
+            { "itemTitle": "기금사업" },
+            { "itemTitle": "각종 홍보자료" },
+            { "itemTitle": "기부방법 및 절차" },
+            { "itemTitle": "기부금 접수·운용 현황" },
+            { "itemTitle": "자주묻는 질문" },
+            { "itemTitle": "제도 관련 건의사항" }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "종합민원",
+      "groups": [
+        {
+          "groupTitle": "민원안내",
+          "items": [
+            { "itemTitle": "민원실 이용 안내" },
+            { "itemTitle": "정부24(어디서나민원)" },
+            { "itemTitle": "무인민원발급기" },
+            { "itemTitle": "여권민원" },
+            { "itemTitle": "민원소식" },
+            { "itemTitle": "자동차민원", "newWindow": true },
+            { "itemTitle": "민원편람(서식)" }
+          ]
+        },
+        {
+          "groupTitle": "미추홀콜센터",
+          "items": [
+            { "itemTitle": "센터소개" },
+            { "itemTitle": "오시는 길" },
+            { "itemTitle": "상담안내" },
+            { "itemTitle": "전화상담 예약" },
+            { "itemTitle": "고마워요 120" }
+          ]
+        },
+        {
+          "groupTitle": "민원신청",
+          "items": [
+            { "itemTitle": "민원상담" },
+            { "itemTitle": "110 화상수화통역서비스" },
+            { "itemTitle": "불공정거래 피해·상가임대차 분쟁 상담" }
+          ]
+        },
+        {
+          "groupTitle": "민원조회",
+          "items": [
+            { "itemTitle": "민원상담 처리결과" },
+            { "itemTitle": "방문민원 처리결과" },
+            { "itemTitle": "나의신고제안보기" },
+            { "itemTitle": "민원사례조회" }
+          ]
+        },
+        {
+          "groupTitle": "신고센터",
+          "items": [
+            { "itemTitle": "부패·공익·부정청탁신고" },
+            { "itemTitle": "예산낭비신고" },
+            { "itemTitle": "안전신고", "newWindow": true },
+            { "itemTitle": "건설부조리신고" },
+            { "itemTitle": "인권침해구제" },
+            { "itemTitle": "체육인 인권침해구제" },
+            { "itemTitle": "일본 수출규제 피해기업 신청" },
+            { "itemTitle": "불합리 규제신고", "newWindow": true }
+          ]
+        },
+        {
+          "groupTitle": "행정서비스헌장",
+          "items": [
+            { "itemTitle": "행정서비스헌장 전문" },
+            { "itemTitle": "공통이행기준" },
+            { "itemTitle": "분야별 이행기준" },
+            { "itemTitle": "온라인행정심판", "newWindow": true }
+          ]
+        },
+        {
+          "groupTitle": "전자팩스 수신조회",
+          "items": [{ "itemTitle": "전자팩스 수신조회 서비스" }]
+        }
+      ]
+    },
+    {
+      "category": "인천소개",
+      "groups": [
+        {
+          "groupTitle": "인천안내",
+          "items": [
+            { "itemTitle": "인천안내" },
+            { "itemTitle": "행정구역" },
+            { "itemTitle": "인천도시브랜드", "newWindow": true },
+            { "itemTitle": "인천비전슬로건" },
+            { "itemTitle": "인천색", "newWindow": true },
+            { "itemTitle": "인천노래" },
+            { "itemTitle": "미디어로 보는 인천" },
+            { "itemTitle": "역대시장" },
+            { "itemTitle": "시민상" },
+            { "itemTitle": "인천시 QR코드" }
+          ]
+        },
+        {
+          "groupTitle": "시청안내",
+          "items": [
+            { "itemTitle": "조직도" },
+            { "itemTitle": "직원/담당업무" },
+            { "itemTitle": "전화번호/팩스번호 안내" },
+            { "itemTitle": "중앙협력본부 안내" },
+            { "itemTitle": "부서 위치 안내" },
+            { "itemTitle": "시설물 대관 안내" },
+            { "itemTitle": "주차장 이용안내" },
+            { "itemTitle": "찾아오시는 길" }
+          ]
+        },
+        {
+          "groupTitle": "인천역사",
+          "items": [
+            { "itemTitle": "유래와 연혁" },
+            { "itemTitle": "시대별 역사" },
+            { "itemTitle": "인천설화" },
+            { "itemTitle": "지명유래" },
+            { "itemTitle": "인천인물" },
+            { "itemTitle": "사진으로 보는 역사" },
+            { "itemTitle": "오늘의 역사" },
+            { "itemTitle": "역사자료실" },
+            { "itemTitle": "인천시민愛집(舊역사자료관)" }
+          ]
+        },
+        {
+          "groupTitle": "賞賞인천",
+          "items": [
+            { "itemTitle": "기관표창" },
+            { "itemTitle": "표창추천 및 후보자 공개검증" }
+          ]
+        },
+        {
+          "groupTitle": "행정자료실",
+          "items": [{ "itemTitle": "행정자료실 이용안내" }]
+        },
+        {
+          "groupTitle": "국제교류",
+          "items": [
+            { "itemTitle": "자매도시" },
+            { "itemTitle": "우호도시" },
+            { "itemTitle": "국제기구 소개" },
+            { "itemTitle": "국제기구 소식" },
+            { "itemTitle": "교류정보" },
+            { "itemTitle": "해외도시 교류사진전" }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "분야",
+      "groups": [
+        { "groupTitle": "교통·도로", "newWindow": true },
+        { "groupTitle": "농업·수산·해양", "newWindow": true },
+        { "groupTitle": "문화·관광", "newWindow": true },
+        { "groupTitle": "도시·주택·토지", "newWindow": true },
+        { "groupTitle": "경제·투자", "newWindow": true },
+        { "groupTitle": "건강·식품·체육", "newWindow": true },
+        { "groupTitle": "복지", "newWindow": true },
+        { "groupTitle": "재난·안전", "newWindow": true },
+        { "groupTitle": "환경", "newWindow": true },
+        { "groupTitle": "행정·법무", "newWindow": true }
+      ]
+    }
+  ]
+}
