@@ -1,9 +1,9 @@
-#skipNav {
+#skip-nav {
   position: absolute;
   top: 0;
   left: 0;
 }
-#skipNav a {
+#skip-nav a {
   position: absolute;
   top: -100px;
   width: 100px;
@@ -14,7 +14,7 @@
   text-align: center;
   z-index: 120;
 }
-#skipNav a:focus,
-#skipNav a:active {
+#skip-nav a:focus,
+#skip-nav a:active {
   top: 0;
 }

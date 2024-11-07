@@ -54,7 +54,7 @@
     <script type="module" src="./assets/js/main.js" defer></script>
   </head>
   <body>
-    <div id="skipNav">
+    <div id="skip-nav">
       <a href="#gnb">주메뉴 바로가기</a>
       <a href="#contents">본문 바로가기</a>
     </div>
@@ -93,19 +93,13 @@
           <div class="blank-area">
             <ul class="blank-list">
               <li class="blank-item">
-                <a href="" title="온라인통합예약 새창 이동" target="_blank"
-                  >온라인통합예약</a
-                >
+                <a href="" title="새창" target="_blank">온라인통합예약</a>
               </li>
               <li class="blank-item">
-                <a href="" title="인천데이터포털 새창 이동" target="_blank"
-                  >인천데이터포털</a
-                >
+                <a href="" title="새창" target="_blank">인천데이터포털</a>
               </li>
               <li class="blank-item">
-                <a href="" title="정보공개포털 새창 이동" target="_blank"
-                  >정보공개포털</a
-                >
+                <a href="" title="새창" target="_blank">정보공개포털</a>
               </li>
             </ul>
           </div>
@@ -114,9 +108,10 @@
               <li class="menu-item"><a href="">로그인</a></li>
               <li class="menu-item"><a href="">회원가입</a></li>
               <li class="menu-item">
-                <div class="select-language">
-                  <label for="selectLanguage" class="blind">다국어 사이트</label
-                  ><select id="selectLanguage" title="다국어 선택">
+                <div class="language">
+                  <label for="select-language" class="blind"
+                    >다국어 사이트</label
+                  ><select id="select-language" title="다국어 선택">
                     <option value class="lang" selected>Language</option>
                     <option value="kr" class="kr">한국어</option>
                     <option value="en" class="en">English</option>
@@ -158,9 +153,8 @@
           <div class="weather-area">
             <div class="current-weather">
               <a href="" target="_blank" title="기상청 날씨 바로가기">
-                <i class="ic-cloud"><span class="blind">흐림</span></i>
                 <span class="temper">
-                  <em>24.5</em>
+                  <em data-weather-temper></em>
                   <span>℃</span>
                 </span>
               </a>
@@ -173,11 +167,11 @@
               >
                 <span class="mise">
                   <span>미세먼지</span>
-                  <strong>좋음</strong>
+                  <strong data-dust-mise></strong>
                 </span>
                 <span class="chomise">
                   <span>초미세먼지</span>
-                  <strong>좋음</strong>
+                  <strong data-dust-chomise></strong>
                 </span>
               </a>
             </div>
@@ -354,19 +348,19 @@
             <div class="mayor-link-area">
               <ul class="link-list">
                 <li class="link-item">
-                  <a href="" target="_blank" title="시민 시장실 새창 이동"
+                  <a href="" target="_blank" title="새창"
                     ><i class="ic-office"></i><span>시민 시장실</span
                     ><i class="ic-arrow"></i
                   ></a>
                 </li>
                 <li class="link-item">
-                  <a href="" target="_blank" title="공약(매니페스토) 새창 이동"
+                  <a href="" target="_blank" title="새창"
                     ><i class="ic-promise"></i><span>공약(매니페스토)</span
                     ><i class="ic-arrow"></i
                   ></a>
                 </li>
                 <li class="link-item">
-                  <a href="" target="_blank" title="시장 메시지 새창 이동"
+                  <a href="" target="_blank" title="새창"
                     ><i class="ic-msg"></i><span>시장 메시지</span
                     ><i class="ic-arrow"></i
                   ></a>
@@ -379,73 +373,73 @@
           <h2 class="section-title">주요서비스</h2>
           <ul class="service-list">
             <li class="service-item">
-              <a href="" target="_blank" title="인천관광 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-tour"></i>
                 <span>인천관광</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="인천관광 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-job"></i>
                 <span>일자리포털</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" title="조직도 링크 이동"
+              <a href=""
                 ><i class="ic-organization"></i>
                 <span>조직도</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="소통이 가득 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-cool"></i>
                 <span>소통이 가득</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" title="민원신청 링크 이동"
+              <a href=""
                 ><i class="ic-minwon"></i>
                 <span>민원신청</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="스마트도시 인천 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-smartcity"></i>
                 <span>스마트도시 인천</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="청년포털 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-youth"></i>
                 <span>청년포털</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="우리집 수돗물 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-water"></i>
                 <span>우리집 수돗물</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="지방세 납부 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-tax"></i>
                 <span>지방세 납부</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="디지털시청 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-digital"></i>
                 <span>디지털시청</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="맞춤형 수혜서비스 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-benefit"></i>
                 <span>맞춤형 수혜서비스</span>
               </a>
             </li>
             <li class="service-item">
-              <a href="" target="_blank" title="예산 새창 이동"
+              <a href="" target="_blank" title="새창"
                 ><i class="ic-budget"></i>
                 <span>예산</span>
               </a>
@@ -864,12 +858,7 @@
                 </div>
               </li>
               <li class="tab-item" role="presentation">
-                <a
-                  href=""
-                  class="tab"
-                  target="_blank"
-                  role="link"
-                  title="문화행사 새창 열기"
+                <a href="" class="tab" target="_blank" role="link" title="새창"
                   >문화행사<i class="ic-link"></i
                 ></a>
               </li>
@@ -1089,61 +1078,61 @@
           <h2 class="section-title">분야별 정보</h2>
           <ul class="info-list">
             <li class="info-item">
-              <a href="" target="_blank" title="교통·도로 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-traffic"></i>
                 <span>교통·도로</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="농업·수산·해양 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-ocean"></i>
                 <span>농업·수산·해양</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="문화·관광 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-culture"></i>
                 <span>문화·관광</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="도시·주택·토지 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-build"></i>
                 <span>도시·주택·토지</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="경제·투자 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-eco"></i>
                 <span>경제·투자</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="건강·식품·체육 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-health"></i>
                 <span>건강·식품·체육</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="복지 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-welfare"></i>
                 <span>복지</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="재난·안전 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-safe"></i>
                 <span>재난·안전</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="환경 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-env"></i>
                 <span>환경</span>
               </a>
             </li>
             <li class="info-item">
-              <a href="" target="_blank" title="행정·세무·법무 새창 이동">
+              <a href="" target="_blank" title="새창">
                 <i class="ic-pub"></i>
                 <span>행정·세무·법무</span>
               </a>
@@ -1396,90 +1385,71 @@
           <section class="sc-daily">
             <h2 class="section-title">일일뉴스</h2>
             <div class="daily-content">
-              <a
-                href=""
-                target="_blank"
-                title="👪저출생 문제, 이번에도 인천이 선도합니다!  i+ 집 드림"
-              >
+              <a href="" target="_blank" title="새창">
                 <img src="./assets/images/media/media_daily.jpg" alt />
                 <strong
                   >👪저출생 문제, 이번에도 인천이 선도합니다! i+ 집 드림</strong
                 >
               </a>
             </div>
-            <a
-              href=""
-              target="_blank"
-              title="일일뉴스 더보기 새창 열기"
-              class="link-more"
-            ></a>
+            <a href="" target="_blank" title="더보기" class="link-more"></a>
           </section>
           <section class="sc-travel">
             <h2 class="section-title">인천여행</h2>
             <div class="daily-content">
-              <a href="" target="_blank" title="인천 전통시장 미식투어">
+              <a href="" target="_blank" title="새창">
                 <img src="./assets/images/media/media_travel.jpg" alt />
                 <strong>인천 전통시장 미식투어</strong>
               </a>
             </div>
-            <a
-              href=""
-              target="_blank"
-              title="인천여행 더보기 새창 열기"
-              class="link-more"
-            ></a>
+            <a href="" target="_blank" title="더보기" class="link-more"></a>
           </section>
           <section class="sc-media">
             <h2 class="section-title">인천미디어</h2>
             <div class="daily-content">
-              <a href="" target="_blank" title="인천기업경영지원센터 개소식">
+              <a href="" target="_blank" title="새창">
                 <img src="./assets/images/media/media_media.jpg" alt />
                 <strong>인천기업경영지원센터 개소식</strong>
               </a>
             </div>
-            <a
-              href=""
-              target="_blank"
-              title="인천미디어 더보기 새창 열기"
-              class="link-more"
-            ></a>
+            <a href="" target="_blank" title="더보기" class="link-more"></a>
           </section>
         </div>
         <section class="sc-sns">
           <h2><span class="blind">인천광역시 sns</span></h2>
           <ul class="sns-list">
             <li class="sns-item">
-              <a href="" target="_blank" title="인스타그램 새창 열기">
+              <a href="" target="_blank" title="새창">
                 <span class="blind">인스타그램</span>
               </a>
             </li>
             <li class="sns-item">
-              <a href="" target="_blank" title="페이스북 새창 열기">
+              <a href="" target="_blank" title="새창">
                 <span class="blind">페이스북</span>
               </a>
             </li>
             <li class="sns-item">
-              <a href="" target="_blank" title="유튜브 새창 열기">
+              <a href="" target="_blank" title="새창">
                 <span class="blind">유튜브</span>
               </a>
             </li>
             <li class="sns-item">
-              <a href="" target="_blank" title="트위터 새창 열기">
+              <a href="" target="_blank" title="새창">
                 <span class="blind">트위터</span>
               </a>
             </li>
             <li class="sns-item">
-              <a href="" target="_blank" title="카카오스토리 새창 열기">
+              <a href="" target="_blank" title="새창">
                 <span class="blind">카카오스토리</span>
               </a>
             </li>
             <li class="sns-item">
-              <a href="" target="_blank" title="네이버블로그 새창 열기">
+              <a href="" target="_blank" title="새창">
                 <span class="blind">네이버블로그</span>
               </a>
             </li>
             <li class="sns-item">
-              <a href="" target="_blank" title="네이버포스트 새창 열기">
+              <a href="" target="_blank" title="새창">
                 <span class="blind">네이버포스트</span>
               </a>
             </li>
@@ -1508,35 +1478,33 @@
           <nav class="footer-nav">
             <ul class="menu-list">
               <li class="menu-item">
-                <a href="" target="_blank" title="새창 이동">누리집 이용안내</a>
+                <a href="" target="_blank" title="새창">누리집 이용안내</a>
               </li>
               <li class="menu-item">
-                <a href="" target="_blank" title="새창 이동"
+                <a href="" target="_blank" title="새창"
                   ><strong>개인정보처리방침</strong></a
                 >
               </li>
               <li class="menu-item">
-                <a href="" target="_blank" title="새창 이동">저작권정책</a>
+                <a href="" target="_blank" title="새창">저작권정책</a>
               </li>
               <li class="menu-item">
-                <a href="" target="_blank" title="새창 이동"
-                  >이메일무단수집거부</a
-                >
+                <a href="" target="_blank" title="새창">이메일무단수집거부</a>
               </li>
               <li class="menu-item">
-                <a href="" target="_blank" title="새창 이동">누리집 안내지도</a>
+                <a href="" target="_blank" title="새창">누리집 안내지도</a>
               </li>
             </ul>
           </nav>
           <div class="footer-mark">
             <ul class="mark-list">
               <li class="mark-item">
-                <a href="" target="_blank" title="새창 이동"
+                <a href="" target="_blank" title="새창"
                   ><span class="blind">국가상징 알아보기</span></a
                 >
               </li>
               <li class="mark-item">
-                <a href="" target="_blank" title="새창 이동"
+                <a href="" target="_blank" title="새창"
                   ><span class="blind">웹접근성 품질인증 마크</span></a
                 >
               </li>
@@ -1552,7 +1520,7 @@
               >&copy; Incheon Metropolitan City. All rights reserved.</small
             >
           </div>
-          <a href="" target="_blank" title="새창 이동"></a>
+          <a href="" target="_blank" title="새창"></a>
         </div>
       </div>
     </footer>

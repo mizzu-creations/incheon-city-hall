@@ -35,7 +35,7 @@ function setSwiperSlide() {
         el: paginationEl,
         type: "custom",
         renderCustom: (_, current, total) => {
-          return `<span><span style="color: #f7b02a; font-weight: 600;">${current}</span> - ${total}</span>`;
+          return `<div class="count-wrap"><span class="current">${current}</span><span class="total">${total}</span></div>`;
         },
       },
       navigation: navigationConfig,
@@ -131,7 +131,98 @@ $(function () {
   scrollToTop();
   changeNewsTab();
   toggleHeaderFixed();
+  getWeatherData();
 });
 
 // json 기반 메가메뉴 생성
-// api 기반 날씨 업데이트
+// keydown
+
+const kelvinToCelsius = (kelvin) => Math.round((kelvin - 273.15) * 10) / 10;
+
+// 미세먼지 등급 기준 정의
+const DUST_LEVEL_CRITERIA = {
+  MISE: [
+    { max: 20, level: "매우좋음" },
+    { max: 50, level: "좋음" },
+    { max: 100, level: "보통" },
+    { max: 200, level: "나쁨" },
+    { max: Infinity, level: "매우나쁨" },
+  ],
+  CHOMISE: [
+    { max: 10, level: "매우좋음" },
+    { max: 25, level: "좋음" },
+    { max: 50, level: "보통" },
+    { max: 75, level: "나쁨" },
+    { max: Infinity, level: "매우나쁨" },
+  ],
+};
+/**
+ * 주어진 기준에 따라 미세먼지 등급을 판단하는 함수
+ * @param {number} value - 미세먼지 농도 값
+ * @param {Array} criteria - 등급 판단 기준 배열
+ * @returns {string} 미세먼지 등급
+ */
+const getDustLevel = (value, criteria) => {
+  return criteria.find(({ max }) => value < max)?.level;
+};
+
+// DOM 요소 선택 함수
+const select = (selector) => document.querySelector(selector);
+
+// API 설정
+const API_KEY = "a0c827574282769ea9891a4c77025012";
+const WEATHER_API = "https://api.openweathermap.org/data/2.5/weather";
+const POLLUTION_API = "https://api.openweathermap.org/data/2.5/air_pollution";
+
+async function getWeatherData() {
+  try {
+    // 날씨 정보와 대기오염 정보를 동시에 가져오기
+    const [weatherResponse, pollutionResponse] = await Promise.all([
+      fetch(`${WEATHER_API}?q=incheon&appid=${API_KEY}`),
+      fetch(`${POLLUTION_API}?lat=37.45&lon=126.4161&appid=${API_KEY}`),
+    ]);
+
+    // 응답 데이터 파싱
+    const weatherData = await weatherResponse.json();
+    const pollutionData = await pollutionResponse.json();
+
+    // 필요한 데이터 추출
+    const temperature = kelvinToCelsius(weatherData.main.temp);
+    const pm10 = pollutionData.list[0].components.pm10;
+    const pm25 = pollutionData.list[0].components.pm2_5;
+
+    // 미세먼지 등급 계산
+    const miseLevel = getDustLevel(pm10, DUST_LEVEL_CRITERIA.MISE);
+    const chomiseLevel = getDustLevel(pm25, DUST_LEVEL_CRITERIA.CHOMISE);
+
+    const weatherMainCode = weatherData.weather[0].main;
+
+    const weatherConditions = {
+      Clear: [1, "맑음"],
+      Clouds: [2, "구름많음"],
+      Atmosphere: [3, "흐림"],
+      Drizzle: [4, "약간 비"],
+      Rain: [5, "비"],
+      Thunderstorm: [5, "비"],
+      Snow: [6, "눈"],
+    };
+
+    const currentWeather = document.querySelector(".current-weather > a");
+    currentWeather.insertAdjacentHTML(
+      "afterbegin",
+      `<img class="weather-icon" data-weather-icon src="" alt />`
+    );
+
+    const weatherIcon = `weather_0${weatherConditions[weatherMainCode][0]}.png`;
+    const weatherAlt = weatherConditions[weatherMainCode][1];
+
+    // DOM 업데이트
+    select("[data-weather-icon]").src = `assets/images/weather/${weatherIcon}`;
+    select("[data-weather-icon]").alt = weatherAlt;
+    select("[data-weather-temper]").textContent = temperature;
+    select("[data-dust-mise]").textContent = miseLevel;
+    select("[data-dust-chomise]").textContent = chomiseLevel;
+  } catch (error) {
+    console.error("날씨 정보 조회 실패:", error);
+  }
+}

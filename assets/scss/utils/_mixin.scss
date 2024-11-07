@@ -11,3 +11,37 @@
     -webkit-box-orient: vertical;
   }
 }
+
+// Breakpoints
+$breakPoints: (
+  "pc-large": 1180px,
+  "pc-small": 1025px,
+  "tablet-max": 1024px,
+  "tablet-min": 768px,
+  "mobile": 767px,
+);
+
+// PC (1180px 이상)
+@mixin pc-lg {
+  @media (min-width: #{map-get($breakPoints, "pc-large")}) {
+    @content;
+  }
+}
+// PC with grid (1179px - 1025px)
+@mixin pc-sm {
+  @media (min-width: #{map-get($breakPoints, "pc-small")}) and (max-width: #{map-get($breakPoints, "pc-large")}) {
+    @content;
+  }
+}
+// Tablet (1024px - 768px)
+@mixin tablet {
+  @media (min-width: #{map-get($breakPoints, "tablet-min")}) and (max-width: #{map-get($breakPoints, "tablet-max")}) {
+    @content;
+  }
+}
+// Mobile (767px 이하)
+@mixin mobile {
+  @media (max-width: #{map-get($breakPoints, "mobile")}) {
+    @content;
+  }
+}
