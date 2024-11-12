@@ -704,36 +704,36 @@
     display: flex;
     gap: 12px;
     .sns-item {
-      a {
+      a > i {
         display: block;
         width: 36px;
         height: 36px;
       }
-      &:nth-child(1) a {
+      .ic-insta {
         background: url(/assets/images/sns/insta.png) no-repeat;
         background-size: 36px 36px;
       }
-      &:nth-child(2) a {
+      .ic-facebook {
         background: url(/assets/images/sns/facebook.png) no-repeat;
         background-size: 36px 36px;
       }
-      &:nth-child(3) a {
+      .ic-youtube {
         background: url(/assets/images/sns/youtube.png) no-repeat;
         background-size: 36px 36px;
       }
-      &:nth-child(4) a {
+      .ic-twitter {
         background: url(/assets/images/sns/twitter.png) no-repeat;
         background-size: 36px 36px;
       }
-      &:nth-child(5) a {
+      .ic-kakaostory {
         background: url(/assets/images/sns/kakaostory.png) no-repeat;
         background-size: 36px 36px;
       }
-      &:nth-child(6) a {
+      .ic-naverblog {
         background: url(/assets/images/sns/blog.png) no-repeat;
         background-size: 36px 36px;
       }
-      &:nth-child(7) a {
+      .ic-naverpost {
         background: url(/assets/images/sns/post.png) no-repeat;
         background-size: 36px 36px;
       }
